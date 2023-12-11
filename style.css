@@ -1,0 +1,507 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+    font-family: sans-serif;
+}
+
+div, section, span, ul, li, a, header {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: fixed;
+    z-index: 999;
+    background-color: bisque;
+}
+
+#header {
+    height: 10vh;
+}
+
+#menu li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+#menu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    float: left;
+}
+
+#inicio {
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    background:radial-gradient(circle, #A7A7A7 0%, #ffffff 50%, #4b4b4b 75%);
+    color: black;
+    padding: 50px;
+}
+
+.texto-inicio-menor {
+    font-size: 20px;
+    animation-name: slideUp;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+.texto-inicio-maior {
+    font-size: 74px;
+    font-family: 'Arial Narrow Bold';
+    font-style: italic;
+    animation-name: slideUp;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    text-shadow: 2px 3px rgb(0, 0, 0);
+    user-select: none;
+}
+
+.botao-inicio {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.botao-inicio:hover .drop-down {
+    display: block;
+    
+}
+
+.drop-down {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    left: 16px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.drop-down a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+}
+
+.drop-down a:hover {
+    background-color: #ffffff;
+
+}
+
+
+.botao-inicio button {
+    padding: 21px 20px 18px;
+    font-size: 18px;
+    background: rgb(255, 255, 255);
+    color: black;
+    border:none;
+    border-radius: 20px;
+    border-color: black;
+    cursor: pointer;
+    width: 233px;
+    transition: background-color 0.5s;
+    animation-name: slideUp;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+}
+
+.botao-inicio button:hover {
+    background-color: brown;
+    color: white;
+}
+.construcao {
+    width: 350px;
+    height: 500px;
+    background-color: #333; /* Cor do prédio */
+    position: relative;
+    transition: background-color 0.5s;
+}
+
+.construcao:hover .window {
+    background-color: #ff0000; /* Cor de iluminação das janelas quando o mouse passa por cima do prédio */
+}
+
+.construcao:hover .door {
+    background-color: #ffd700; /* Cor de iluminação da porta quando o mouse passa por cima do prédio */
+}
+
+.windows {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.window {
+    width: 50px;
+    height: 50px;
+    background-color: #333; /* Cor das janelas */
+    border: 2px solid #000;
+    display: inline-block;
+    margin: 5px;
+    transition: background-color 0.5s;
+}
+
+.window:hover {
+    background-color: #fffb00; /* Cor de iluminação das janelas quando o mouse passa por cima */
+}
+
+.door {
+    width: 60px;
+    height: 120px;
+    background-color: #8B4513; /* Cor da porta */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #000;
+    transition: background-color 0.5s;
+}
+
+.door:hover {
+    background-color: #ffd700; /* Cor de iluminação da porta quando o mouse passa por cima */
+}
+
+#sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.sobre-texto {
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    z-index: 1;
+}
+
+.sobre-texto video {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.texto-pequeno-sobre { 
+    font-size: 20px;
+}
+
+.texto-grande-sobre {
+    font-size: 33px;
+    margin-bottom: 20px;
+    font-style: italic;
+    line-height: 1.36em;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 1px;
+}
+    
+.texto-medio-sobre {
+    font-size: 17px;
+    line-height: 1.8em;
+    text-align: center;
+    margin: 80px;
+}
+
+#line {
+    border-left: thick solid #000;
+    height: 50%;
+    left: 25%;
+    position: absolute;
+}
+
+#local {
+    background: #525252;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.textos {
+    flex: 1;
+    text-align: center;
+    padding: 50px;
+}
+
+.local-titulo {
+    font-size: 96px;
+    font-family: "Playfair Display",serif;
+    font-style: italic;
+    color: aliceblue;
+}
+
+.mapa {
+    flex: 1;
+    margin: 0px;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100vh;
+}
+
+.local-lista {
+    margin-top: 50px;
+}
+
+.local-lista ul {
+    list-style: none;
+}
+
+.separador-local {
+    border-top: 300px solid white;
+    height: 100%;
+    max-width: 2px;
+    margin: auto;
+}
+
+.local-lista li {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+.local-lista li:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.local-lista li:hover::after {
+    content: "\25B6";
+    position: absolute;
+    right: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.local-lista ul li {
+    padding: 5px 10px;
+    position: relative;
+}
+
+#presidio {
+    display: flex;
+}
+
+.imagem-fixa {
+    background: url("presidio.jpg") center/cover fixed;
+    flex: 1;
+}
+
+.textos-presidio {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    color: #000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    margin-top: 0px;
+    margin-bottom: 200px;
+}
+
+.titulo-presido {
+    font-family: "Playfair Display", serif;
+    font-size: 95px;
+    font-style: italic;
+    letter-spacing: -3.5px;
+    margin-bottom: 50px;
+}
+
+.textos-presidio h4 {
+    font-style: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #5D5957;
+    margin-bottom: 30px;
+}
+
+.texto-presidio h3 {
+    font-size: 26px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #A7A7A7;
+    margin-bottom: 30px;
+}
+
+.separador-presidio {
+    border-left: 10px solid rgb(0, 0, 0);
+    height: 100%;
+    max-width: 2px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#facilidades {
+    background: #0a0600;
+    color: #ffffff;
+    display: flex;
+}
+
+#facilidades h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 95px;
+    font-style: italic;
+}
+
+.separador-facilidade {
+    border-left: 4px dotted rgb(255, 255, 255);
+    height: 100%;
+    max-width: 2px;
+    margin: auto;
+}
+
+.titulo-facilidades {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.facilidades-coluna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 29px;
+}
+
+.facilidades-coluna img {
+    width: 75px;
+    height: auto;
+}
+
+.coluna1, .coluna2, .coluna3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+
+#planta {
+    background-color: #160e01;
+    color: #ffffff;
+    display: flex;
+}
+
+.separador-planta {
+    border-left: 4px dashed rgb(255, 255, 255);
+    height: 100%;
+    max-width: 2px;
+    margin: auto;
+}
+
+.planta-imagem {
+    flex: 1;
+
+}
+
+.conteudo-planta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+    gap: 15px;
+    font-weight: 1000;
+}
+
+.titulo-planta {
+    font-family: "Playfair Display", serif;
+    font-size: 90px;
+    font-style: italic;
+    margin-bottom: 60px;
+}
+
+.conteudo-planta h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.conteudo-planta h4 {
+    color: #f9c1af;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.conteudo-planta a {
+    color: #80584A;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 225, 225);
+    font-size: 19px;
+}
+
+.planta-imagem img {
+    width: 79vh;
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 20px;
+    color: #000;
+    text-align: left;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+    color: #b08b7f;
+    text-decoration: none;
+
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@keyframes slideUp {
+    0%,
+    50% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    60%,
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
